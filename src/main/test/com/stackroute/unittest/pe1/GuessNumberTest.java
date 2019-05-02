@@ -7,7 +7,6 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class GuessNumberTest {
-/*
 
     GuessNumber object;
     @Before
@@ -19,18 +18,29 @@ public class GuessNumberTest {
     public void tearDown() throws Exception {
     }
     @Test
-    public void checkforcorrectGuess(){
+    public void testcheckforcorrectGuess(){
         String expectedValue="Number guessed matches the original number";
         String  actualValue= object.guessNum(56);
         assertEquals(expectedValue,actualValue);
     }
     @Test
-    public void checkforIncorrectGuess(){
-        String expectedValue="Number guessed is less than original number";
+    public void testcheckforGuessMoreThanOriginal(){
+        String expectedValue="Number guessed is more than original number";
         String actualValue=object.guessNum(99);
         assertEquals(expectedValue,actualValue);
     }
-*/
+    @Test
+    public void testCheckForGuessLessThanOriginal(){
+        String expectedValue="Number guessed is less than original number";
+        String actualValue=object.guessNum(23);
+        assertEquals(expectedValue,actualValue);
+    }
+   /* @Test
+    public void testCheckForNullValue(){
+        String expectedValue="Enter Valid Input";
+        String actualValue=object.guessNum((0));
+        assertNotNull(expectedValue,actualValue);
+    }*/
 
 }
 

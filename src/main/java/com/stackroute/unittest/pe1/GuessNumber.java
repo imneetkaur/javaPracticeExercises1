@@ -6,20 +6,25 @@ public class GuessNumber {
         int originalnum=56;
         String str="";
 
-        while (number != originalnum) {
+        while (true) {
 
-            if (number < originalnum) {
-                System.out.println("EntryPoint");
+            if(number==originalnum){
+                str = "Number guessed matches the original number";
+                break;
+            }else if (number < originalnum) {
                 str = "Number guessed is less than original number";
-                System.out.println(str);
-            } else {
-                System.out.println("ElseEntryPoint");
+                break;
+            } else if(number > originalnum){
                 str = "Number guessed is more than original number";
-                System.out.println(str);
+            }
+            else  {
+                str = "Enter Valid Input";
+                break;
+
             }
         }
-        str = "Number guessed matches the original number";
-        System.out.println(str);
         return str;
+
     }
+
 }
